@@ -43,6 +43,7 @@ body{
             grid-template-rows: var(--height_main_header) var(--height_main_content) var(--height_main_footer);
             grid-template-areas:
                 'header'
+                'ad'
                 'content'
                 'footer' 
             ;
@@ -72,17 +73,22 @@ body{
                     background-color: var(--action_content_bg_color);
                     }
                     .btn_book_time{
-                        background-color: var(--btn_btn_book_time_bg_color);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                         border: none;
-                        color: var(--txt_btn_book_time_color);
-                        width: 70%;
-                        height: 40%;
+                        width: 90%;
+                        height: 30%;
+                        border-radius: 1rem;
                         text-decoration: none;
-                        cursor: pointer;
+                        background-color: var(--btn_btn_book_time_bg_color);
+                        color: var(--txt_btn_book_time_color);
                         }
                 .content_main_section .info_section{
                     width: 90%;
                     height: 47%;
+                    border-radius: 1rem;
                     background-color:var(--info_section_bg_color);
                 }
             .footer_main_section{
@@ -91,3 +97,13 @@ body{
                 height: auto;
                 background-color: var(--footer_main_br_color);
             }
+
+            /*-----------------------STYLES ALTER-------------------------*/
+            .is_true{
+                height: 50%;
+            }
+            .hidden{
+                display: none;
+            }
+
+
