@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+/* ---------------Variable-----------------*/
+:root {
+    /*BACKGROUND COLORS*/
+    --bady_bg_color: white;
+    --main_bg_color: azure;
+    --header_main_bg_color: gray;
+    --content_main_bg_color: lightgray;
+    --action_content_bg_color: whitesmoke;
+    --info_section_bg_color: darkgray;
+    --footer_main_br_color: gray;
+    --btn_btn_book_time_bg_color: #8E8E8E;
+
+    /*TEXT COLORS*/
+    --txt_btn_book_time_color: white;
+
+    /*MAIN PROPOSIONS*/
+    --height_main_header: 8vh;
+    --height_main_content: 84vh;
+    --height_main_footer: 8vh;
+    }
+/*-----------------------------------------*/
+
+body{
+    background-color: var(--bady_bg_color);
+}
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: center; */
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--main_bg_color);
+        }
+        .main_section{
+            display: grid;
+            grid-template-rows: var(--height_main_header) var(--height_main_content) var(--height_main_footer);
+            grid-template-areas:
+                'header'
+                'content'
+                'footer' 
+            ;
+            background-color: var(main_bg_color);
+            }
+            .header_main_section{
+                grid-area: 'header';
+                width: 100%;
+                height: auto;
+                background-color: var(--header_main_bg_color);
+                }
+            .content_main_section{
+                grid-area: 'content';
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+                background-color: var(--content_main_bg_color);
+                }
+                .content_main_section .action_section{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 40vh;
+                    background-color: var(--action_content_bg_color);
+                    }
+                    .btn_book_time{
+                        background-color: var(--btn_btn_book_time_bg_color);
+                        border: none;
+                        color: var(--txt_btn_book_time_color);
+                        width: 70%;
+                        height: 40%;
+                        text-decoration: none;
+                        cursor: pointer;
+                        }
+                .content_main_section .info_section{
+                    width: 90%;
+                    height: 47%;
+                    background-color:var(--info_section_bg_color);
+                }
+            .footer_main_section{
+                grid-area: 'footer';
+                width: 100%;
+                height: auto;
+                background-color: var(--footer_main_br_color);
+            }
