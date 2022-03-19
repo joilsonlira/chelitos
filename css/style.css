@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     text-decoration: none;
+    font-family: roboto, sans-serif;
 }
 /* ---------------Variable-----------------*/
 :root {
@@ -91,6 +92,8 @@ body{
                     border-radius: 1rem;
                     background-color:var(--info_section_bg_color);
                     }
+
+                    /*----------------------book time page--------------------------*/
                     .workers{
                         display: flex;
                         flex-direction: column;
@@ -99,39 +102,57 @@ body{
                         }
                         .worker_tag{
                             display: grid;
-                            grid-template-columns: 1fr 2fr 1fr;
+                            grid-template-columns: 1fr 2fr;
                             grid-template-areas:
                                 'photo name name'
                                 'photo img rank'
                             ;
-                            
+                            width: 40%;
                             background-color: bisque;
-                            font-size: 0.8rem;
+                            font-size: 60%;
+                            padding: 0.5rem;
                             }
                             .worker_tag .worker_header{
                                 grid-area: 'photo';
+                                text-align: center;
                                 background-color: blueviolet;
                             }
                             .worker_tag .worker_content {
                                 grid-area:'name';
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
                                 width: 100%;
                                 background-color: white;
                             }
-                            .worker_tag .worker_rank > img{
-                            grid-area: 'img';
-                            background-color: aquamarine;
+                            .worker_tag .worker_rank{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                width: 100%;
+                                background-color: aquamarine;
+                            }
+                            .worker_rank > img{
+                                width: 100%;
                             }
                             .worker_tag .worker_rank > p{
-                            grid-area: 'rank';
-                            background-color:coral;
-                            }
+                                grid-area: 'rank';
+                                width: 50%;
+                                font-size: medium;
+                                font-weight: 400;
+                                background-color:coral;
+                                }
                         .data{
                             display: flex;
                             flex-direction: row;
                             flex-wrap: wrap;
                             width: 100%;
-                            height: auto;
+                            height: 1rem;
                             background-color: aqua;
+                            }
+                            .data > h2{
+                                font-size: 1rem;
                             }
                             .data > ul{
                                 display: flex;
@@ -156,7 +177,7 @@ body{
                             flex-direction: row;
                             flex-wrap: wrap;
                             width: 100%;
-                            height: auto;
+                            height: 1rem;
                             background-color:antiquewhite;
                             }
                             .hour > ul{
@@ -193,5 +214,3 @@ body{
             .hidden{
                 display: none;
             }
-
-
